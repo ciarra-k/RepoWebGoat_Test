@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
       name: Trigger Checkmarx Scan
-        run: |
+      run: |
               curl -X POST "https://us.ast.checkmarx.net/cxrestapi/projects/b589298d-58d8-4b23-a56e-90b739b4ef9e/scan" \
               -H "Authorization: Bearer ${{ secrets.CHECKMARX_ACCESS_TOKEN }}" \
               -H "Content-Type: application/json" \
